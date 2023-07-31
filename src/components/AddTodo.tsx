@@ -8,8 +8,11 @@ export function AddTodo() {
 
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
-
-    dispatch(add({ newTodo }));
+    dispatch(
+      add({
+        newTodo,
+      })
+    );
     setNewTodo("");
   }
 
@@ -17,7 +20,7 @@ export function AddTodo() {
     <form onSubmit={handleSubmit}>
       <input
         type="text"
-        placeholder="Novo to-do"
+        placeholder="Novo To-do"
         value={newTodo}
         onChange={(e) => setNewTodo(e.target.value)}
       />

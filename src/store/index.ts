@@ -1,9 +1,9 @@
-import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { useSelector, TypedUseSelectorHook } from "react-redux/es/exports";
+import { createSlice, configureStore } from "@reduxjs/toolkit";
+import { TypedUseSelectorHook, useSelector } from "react-redux";
 
 const todoSlice = createSlice({
   name: "todo",
-  initialState: ["Fazer café", "Estudar Redux", "Estudar Zustand"],
+  initialState: ["Fazer café", "Estudar Redux"],
 
   reducers: {
     add: (state, action) => {
