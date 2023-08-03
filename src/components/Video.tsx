@@ -9,6 +9,10 @@ export function Video({}: VideoProps) {
 
   const { currentLesson } = useCurrentLesson();
 
+  if (!currentLesson) {
+    return null;
+  }
+
   function handleplayNext() {
     dispatch(next());
   }
